@@ -34,3 +34,9 @@ commands:
     container: frontend
     run: |
       gulp watch
+
+  deploy: !Command
+    description: deploy gh pages
+    container: frontend
+    run: |
+      gulp deploy
