@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BEM — UIkit</title>
+        <meta charset="utf-8">
+        <base href="">
+        <link href="css/doc.css" media="all" rel="stylesheet" type="text/css">
+        <link href="css/desktop.css" media="all" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;subset=latin,cyrillic">
+        <link rel="stylesheet" href="highlight/github.min.css">
+        <script src="highlight/highlight.min.js"></script>
+        <script>
+            function toggleTab(index, hash) {
+                var tabLinkList = document.querySelectorAll("[data-tab-link='"+hash+"']");
+                var tabContentList = document.querySelectorAll("[data-tab-content='"+hash+"']");
+
+                Array.prototype.forEach.call(tabLinkList, function(node, i) {
+                    if (index === i) {
+                        node.classList.add('doc-tab__list-item_state_active');
+                        tabContentList[i].classList.add('doc-tab__content_state_active');
+                    } else {
+                        node.classList.remove('doc-tab__list-item_state_active');
+                        tabContentList[i].classList.remove('doc-tab__content_state_active');
+                    }
+                });
+            }
+            hljs.initHighlightingOnLoad();
+        </script>
+    </head>
+    <body>
+
+        <div class="doc-header doc-header_theme_shadow">
+            <a href="index.html" class="doc-header__logo">UIkit</a>
+            <ul class="doc-header__nav">
+                
+                    <li class="doc-header__nav-item">
+                        <a
+                            href="docs.html"
+                            class="
+                                doc-header__nav-link
+                                
+                                    doc-header__nav-link_state_active
+                                
+                            "
+                        >
+                            
+                                documentation
+                            
+                        </a>
+                    </li>
+                
+                    <li class="doc-header__nav-item">
+                        <a
+                            href="changelog.html"
+                            class="
+                                doc-header__nav-link
+                                
+                            "
+                        >
+                            
+                                changelog
+                            
+                        </a>
+                    </li>
+                
+                    <li class="doc-header__nav-item">
+                        <a
+                            href="rules.html"
+                            class="
+                                doc-header__nav-link
+                                
+                            "
+                        >
+                            
+                                rules
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+
+        <div class="doc-page">
+            <div class="doc-page__side">
+                
+                    <div class="doc-page__side-title">
+                        
+                            Documentation
+                        
+                    </div>
+                    
+                        <div class="doc-menu">
+                            <div class="doc-menu__title">
+                                BASE
+                            </div>
+                            <div class="doc-menu__list">
+                                
+                                    <div class="doc-menu__list-item">
+                                        <a
+                                            href="docs/base/sizes.html"
+                                            class="
+                                                doc-menu__list-link
+                                                
+                                            "
+                                        >
+                                            Sizes
+                                        </a>
+                                    </div>
+                                
+                                    <div class="doc-menu__list-item">
+                                        <a
+                                            href="docs/base/media.html"
+                                            class="
+                                                doc-menu__list-link
+                                                
+                                            "
+                                        >
+                                            Media
+                                        </a>
+                                    </div>
+                                
+                            </div>
+                        </div>
+                    
+                        <div class="doc-menu">
+                            <div class="doc-menu__title">
+                                COMMON
+                            </div>
+                            <div class="doc-menu__list">
+                                
+                                    <div class="doc-menu__list-item">
+                                        <a
+                                            href="docs/common/title.html"
+                                            class="
+                                                doc-menu__list-link
+                                                
+                                            "
+                                        >
+                                            Title
+                                        </a>
+                                    </div>
+                                
+                                    <div class="doc-menu__list-item">
+                                        <a
+                                            href="docs/common/text.html"
+                                            class="
+                                                doc-menu__list-link
+                                                
+                                            "
+                                        >
+                                            Text
+                                        </a>
+                                    </div>
+                                
+                                    <div class="doc-menu__list-item">
+                                        <a
+                                            href="docs/common/line.html"
+                                            class="
+                                                doc-menu__list-link
+                                                
+                                            "
+                                        >
+                                            Line
+                                        </a>
+                                    </div>
+                                
+                                    <div class="doc-menu__list-item">
+                                        <a
+                                            href="docs/common/link.html"
+                                            class="
+                                                doc-menu__list-link
+                                                
+                                            "
+                                        >
+                                            Link
+                                        </a>
+                                    </div>
+                                
+                            </div>
+                        </div>
+                    
+                        <div class="doc-menu">
+                            <div class="doc-menu__title">
+                                ELEMENTS
+                            </div>
+                            <div class="doc-menu__list">
+                                
+                                    <div class="doc-menu__list-item">
+                                        <a
+                                            href="docs/elements/list.html"
+                                            class="
+                                                doc-menu__list-link
+                                                
+                                            "
+                                        >
+                                            List
+                                        </a>
+                                    </div>
+                                
+                                    <div class="doc-menu__list-item">
+                                        <a
+                                            href="docs/elements/picture.html"
+                                            class="
+                                                doc-menu__list-link
+                                                
+                                            "
+                                        >
+                                            Picture
+                                        </a>
+                                    </div>
+                                
+                            </div>
+                        </div>
+                    
+                        <div class="doc-menu">
+                            <div class="doc-menu__title">
+                                LAYOUT
+                            </div>
+                            <div class="doc-menu__list">
+                                
+                                    <div class="doc-menu__list-item">
+                                        <a
+                                            href="docs/layout/page.html"
+                                            class="
+                                                doc-menu__list-link
+                                                
+                                            "
+                                        >
+                                            Page
+                                        </a>
+                                    </div>
+                                
+                                    <div class="doc-menu__list-item">
+                                        <a
+                                            href="docs/layout/box.html"
+                                            class="
+                                                doc-menu__list-link
+                                                
+                                            "
+                                        >
+                                            Box
+                                        </a>
+                                    </div>
+                                
+                                    <div class="doc-menu__list-item">
+                                        <a
+                                            href="docs/layout/grid.html"
+                                            class="
+                                                doc-menu__list-link
+                                                
+                                            "
+                                        >
+                                            Grid
+                                        </a>
+                                    </div>
+                                
+                                    <div class="doc-menu__list-item">
+                                        <a
+                                            href="docs/layout/panel.html"
+                                            class="
+                                                doc-menu__list-link
+                                                
+                                            "
+                                        >
+                                            Panel
+                                        </a>
+                                    </div>
+                                
+                            </div>
+                        </div>
+                    
+                
+            </div>
+            <div class="doc-page__content">
+                <div class="doc-content">
+                    <h1 class="doc-content__title doc-content__title_size_h1">
+    UIkit
+</h1>
+<div class="doc-content__paragraph">
+    Основа для разработки быстрых и мощных веб-интерфейсов. Он основан на принципе разделения интерфейса на независимые единицы. Это позволяет вам легко и быстро создавать интерфейс любой сложности и повторно использовать существующий код, избегая «Copy-Paste».
+</div>
+<div class="doc-content__line"></div>
+<h2 class="doc-content__title doc-content__title_size_h2">
+    Поддержка браузеров
+</h2>
+<div class="doc-content__paragraph">
+    В таблице перечислены версии, на которых тестируется UIkit. «Latest» означает, что он отлично работает во всех последних версиях этого браузера.
+Со многими браузерами, двигающимися в сторону автоматического обновляется сразу после выхода новой версии, поддержка конкретной версии стала немного сложной в последние годы.
+</div>
+<div class="doc-content__paragraph">
+    Короче говоря: UIkit будет работать практически в любом современном браузере.
+</div>
+<div class="doc-content__table">
+    <div class="doc-content__table-head">
+        <div class="doc-content__table-row">
+    <div class="doc-content__table-cell">
+    <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" class="doc-content__image" alt="">
+
+</div>
+<div class="doc-content__table-cell">
+    <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" class="doc-content__image" alt="">
+
+</div>
+<div class="doc-content__table-cell">
+    <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" class="doc-content__image" alt="">
+
+</div>
+<div class="doc-content__table-cell">
+    <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/archive/internet-explorer_9-11/internet-explorer_9-11_48x48.png" class="doc-content__image" alt="">
+
+</div>
+<div class="doc-content__table-cell">
+    <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" class="doc-content__image" alt="">
+
+</div>
+<div class="doc-content__table-cell">
+    <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" class="doc-content__image" alt="">
+
+</div>
+
+</div>
+
+    </div>
+    <div class="doc-content__table-body">
+        <div class="doc-content__table-row">
+    <div class="doc-content__table-cell">
+    Latest
+</div>
+<div class="doc-content__table-cell">
+    Latest
+</div>
+<div class="doc-content__table-cell">
+    Latest
+</div>
+<div class="doc-content__table-cell">
+    10+
+</div>
+<div class="doc-content__table-cell">
+    7.1+
+</div>
+<div class="doc-content__table-cell">
+    Latest
+</div>
+
+</div>
+
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

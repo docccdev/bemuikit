@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BEM — UIkit</title>
+        <meta charset="utf-8">
+        <base href="">
+        <link href="css/doc.css" media="all" rel="stylesheet" type="text/css">
+        <link href="css/desktop.css" media="all" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;subset=latin,cyrillic">
+        <link rel="stylesheet" href="highlight/github.min.css">
+        <script src="highlight/highlight.min.js"></script>
+        <script>
+            function toggleTab(index, hash) {
+                var tabLinkList = document.querySelectorAll("[data-tab-link='"+hash+"']");
+                var tabContentList = document.querySelectorAll("[data-tab-content='"+hash+"']");
+
+                Array.prototype.forEach.call(tabLinkList, function(node, i) {
+                    if (index === i) {
+                        node.classList.add('doc-tab__list-item_state_active');
+                        tabContentList[i].classList.add('doc-tab__content_state_active');
+                    } else {
+                        node.classList.remove('doc-tab__list-item_state_active');
+                        tabContentList[i].classList.remove('doc-tab__content_state_active');
+                    }
+                });
+            }
+            hljs.initHighlightingOnLoad();
+        </script>
+    </head>
+    <body>
+
+        <div class="doc-header doc-header_theme_shadow">
+            <a href="index.html" class="doc-header__logo">UIkit</a>
+            <ul class="doc-header__nav">
+                
+                    <li class="doc-header__nav-item">
+                        <a
+                            href="docs.html"
+                            class="
+                                doc-header__nav-link
+                                
+                            "
+                        >
+                            
+                                documentation
+                            
+                        </a>
+                    </li>
+                
+                    <li class="doc-header__nav-item">
+                        <a
+                            href="changelog.html"
+                            class="
+                                doc-header__nav-link
+                                
+                                    doc-header__nav-link_state_active
+                                
+                            "
+                        >
+                            
+                                changelog
+                            
+                        </a>
+                    </li>
+                
+                    <li class="doc-header__nav-item">
+                        <a
+                            href="rules.html"
+                            class="
+                                doc-header__nav-link
+                                
+                            "
+                        >
+                            
+                                rules
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+
+        <div class="doc-page">
+            <div class="doc-page__side">
+                
+                    <div class="doc-page__side-title">
+                        
+                            changelog
+                        
+                    </div>
+                    
+                
+            </div>
+            <div class="doc-page__content">
+                <div class="doc-content">
+                    <h1 class="doc-content__title doc-content__title_size_h1">
+    Changelog
+</h1>
+<h2 class="doc-content__title doc-content__title_size_h2">
+    0.1.34 beta (19.04.2017)
+</h2>
+<ul class="
+    doc-content__list
+        
+    "
+>
+    <li class="doc-content__list-item">
+    Update <a href="docs/layout/panel.html" class="doc-content__link" title="">ui-panel</a>
+<ul class="
+    doc-content__list
+        
+    "
+>
+    <li class="doc-content__list-item">
+    added border-radius and padding for children body
+</li>
+
+</ul>
+
+</li>
+<li class="doc-content__list-item">
+    Added blue theme for <a href="docs/layout/panel.html" class="doc-content__link" title="">ui-panel</a>
+<ul class="
+    doc-content__list
+        
+    "
+>
+    <li class="doc-content__list-item">
+    <code class="doc-content__codespan">.ui-panel_theme_blue</code>
+
+</li>
+
+</ul>
+
+</li>
+<li class="doc-content__list-item">
+    Added margin auto for <a href="docs/layout/box.html" class="doc-content__link" title="">ui-box</a>
+<ul class="
+    doc-content__list
+        
+    "
+>
+    <li class="doc-content__list-item">
+    <code class="doc-content__codespan">.ui-box_margin_auto</code>
+
+</li>
+<li class="doc-content__list-item">
+    <code class="doc-content__codespan">.ui-box_margin-left_auto</code>
+
+</li>
+<li class="doc-content__list-item">
+    <code class="doc-content__codespan">.ui-box_margin-top_auto</code>
+
+</li>
+<li class="doc-content__list-item">
+    <code class="doc-content__codespan">.ui-box_margin-right_auto</code>
+
+</li>
+<li class="doc-content__list-item">
+    <code class="doc-content__codespan">.ui-box_margin-bottom_auto</code>
+
+</li>
+<li class="doc-content__list-item">
+    <code class="doc-content__codespan">.ui-box_margin-tb_auto</code>
+
+</li>
+<li class="doc-content__list-item">
+    <code class="doc-content__codespan">.ui-box_margin-lr_auto</code>
+
+</li>
+
+</ul>
+
+</li>
+
+</ul>
+<h2 class="doc-content__title doc-content__title_size_h2">
+    0.1.33 beta (18.04.2017)
+</h2>
+<ul class="
+    doc-content__list
+        
+    "
+>
+    <li class="doc-content__list-item">
+    Added blue theme for <a href="docs/layout/box.html" class="doc-content__link" title="">ui-box</a>
+<ul class="
+    doc-content__list
+        
+    "
+>
+    <li class="doc-content__list-item">
+    <code class="doc-content__codespan">.ui-box_theme_blue</code>
+
+</li>
+
+</ul>
+
+</li>
+<li class="doc-content__list-item">
+    Improved block variables
+</li>
+
+</ul>
+<h2 class="doc-content__title doc-content__title_size_h2">
+    0.1.32 beta (13.04.2017)
+</h2>
+<ul class="
+    doc-content__list
+        
+    "
+>
+    <li class="doc-content__list-item">
+    Added <a href="docs/elements/picture.html" class="doc-content__link" title="">picture</a>
+ to portable bundle
+</li>
+<li class="doc-content__list-item">
+    Added min and max width for <a href="docs/layout/grid.html" class="doc-content__link" title="">grid__item</a>
+
+</li>
+
+</ul>
+<h2 class="doc-content__title doc-content__title_size_h2">
+    0.1.31 beta (27.03.2017)
+</h2>
+<ul class="
+    doc-content__list
+        
+    "
+>
+    <li class="doc-content__list-item">
+    Fixed bug with <a href="docs/layout/grid.html" class="doc-content__link" title="">grid</a>
+ item padding when applied theme divider
+</li>
+
+</ul>
+<h2 class="doc-content__title doc-content__title_size_h2">
+    0.1.30 beta (23.03.2017)
+</h2>
+<ul class="
+    doc-content__list
+        
+    "
+>
+    <li class="doc-content__list-item">
+    Fixed bug with duplicate style
+</li>
+
+</ul>
+<h2 class="doc-content__title doc-content__title_size_h2">
+    0.1.29 beta (23.03.2017)
+</h2>
+<ul class="
+    doc-content__list
+        
+    "
+>
+    <li class="doc-content__list-item">
+    Big update <a href="docs/layout/grid.html" class="doc-content__link" title="">grid</a>
+ divider<ul class="
+    doc-content__list
+        
+    "
+>
+    <li class="doc-content__list-item">
+    <code class="doc-content__codespan">Responsive</code>
+
+</li>
+<li class="doc-content__list-item">
+    <code class="doc-content__codespan">Multi column</code>
+
+</li>
+<li class="doc-content__list-item">
+    <code class="doc-content__codespan">Horizontal and vertical divider</code>
+
+</li>
+
+</ul>
+
+</li>
+
+</ul>
+<h2 class="doc-content__title doc-content__title_size_h2">
+    0.1.28 beta (06.03.2017)
+</h2>
+<ul class="
+    doc-content__list
+        
+    "
+>
+    <li class="doc-content__list-item">
+    Added font weight class for <a href="docs/common/text.html" class="doc-content__link" title="">text</a>
+<ul class="
+    doc-content__list
+        
+    "
+>
+    <li class="doc-content__list-item">
+    <code class="doc-content__codespan">.ui-text-thin</code>
+
+</li>
+<li class="doc-content__list-item">
+    <code class="doc-content__codespan">.ui-text-light</code>
+
+</li>
+<li class="doc-content__list-item">
+    <code class="doc-content__codespan">.ui-text-regular</code>
+
+</li>
+<li class="doc-content__list-item">
+    <code class="doc-content__codespan">.ui-text-medium</code>
+
+</li>
+<li class="doc-content__list-item">
+    <code class="doc-content__codespan">.ui-text-black</code>
+
+</li>
+
+</ul>
+
+</li>
+
+</ul>
+<h2 class="doc-content__title doc-content__title_size_h2">
+    0.1.27 beta (06.03.2017)
+</h2>
+<ul class="
+    doc-content__list
+        
+    "
+>
+    <li class="doc-content__list-item">
+    Added modifier for <a href="docs/layout/box.html" class="doc-content__link" title="">ui-box</a>
+<ul class="
+    doc-content__list
+        
+    "
+>
+    <li class="doc-content__list-item">
+    <code class="doc-content__codespan">.ui-box_theme_transparent</code>
+
+</li>
+
+</ul>
+
+</li>
+<li class="doc-content__list-item">
+    Added modifier for <a href="docs/layout/panel.html" class="doc-content__link" title="">ui-panel</a>
+<ul class="
+    doc-content__list
+        
+    "
+>
+    <li class="doc-content__list-item">
+    <code class="doc-content__codespan">.ui-panel_theme_transparent</code>
+
+</li>
+
+</ul>
+
+</li>
+<li class="doc-content__list-item">
+    Added <a href="docs/base/media.html" class="doc-content__link" title="">media rules</a>
+ for all <a href="docs/layout/box.html" class="doc-content__link" title="">ui-box</a>
+ modifiers
+</li>
+<li class="doc-content__list-item">
+    Added <a href="docs/base/media.html" class="doc-content__link" title="">media rules</a>
+ for all <a href="docs/layout/panel.html" class="doc-content__link" title="">ui-panel</a>
+ modifiers
+</li>
+
+</ul>
+<h2 class="doc-content__title doc-content__title_size_h2">
+    0.1.26 beta (01.03.2017)
+</h2>
+<ul class="
+    doc-content__list
+        
+    "
+>
+    <li class="doc-content__list-item">
+    Added text color <a href="docs/common/text.html" class="doc-content__link" title="">ui-text-muted</a>
+
+</li>
+<li class="doc-content__list-item">
+    Added modifier for <a href="docs/layout/panel.html" class="doc-content__link" title="">ui-panel</a>
+<ul class="
+    doc-content__list
+        
+    "
+>
+    <li class="doc-content__list-item">
+    <code class="doc-content__codespan">.ui-panel_style_border</code>
+
+</li>
+
+</ul>
+
+</li>
+<li class="doc-content__list-item">
+    Added border-box for <a href="docs/layout/panel.html" class="doc-content__link" title="">ui-panel</a>
+
+</li>
+<li class="doc-content__list-item">
+    Reset margin-bottom for <a href="docs/layout/grid.html" class="doc-content__link" title="">ui-grid_theme_divider</a>
+
+</li>
+
+</ul>
+<h2 class="doc-content__title doc-content__title_size_h2">
+    0.1.25 beta (20.02.2017)
+</h2>
+<ul class="
+    doc-content__list
+        
+    "
+>
+    <li class="doc-content__list-item">
+    Added modifiers for <a href="docs/layout/grid.html" class="doc-content__link" title="">ui-grid</a>
+<ul class="
+    doc-content__list
+        
+    "
+>
+    <li class="doc-content__list-item">
+    <code class="doc-content__codespan">.ui-grid_direction_row</code>
+
+</li>
+<li class="doc-content__list-item">
+    <code class="doc-content__codespan">.ui-grid_direction_row-reverse</code>
+
+</li>
+<li class="doc-content__list-item">
+    <code class="doc-content__codespan">.ui-grid_direction_column</code>
+
+</li>
+<li class="doc-content__list-item">
+    <code class="doc-content__codespan">.ui-grid_direction_column-reverse</code>
+
+</li>
+<li class="doc-content__list-item">
+    <code class="doc-content__codespan">.ui-grid_align_left</code>
+
+</li>
+<li class="doc-content__list-item">
+    <code class="doc-content__codespan">.ui-grid_valign_top</code>
+
+</li>
+
+</ul>
+
+</li>
+<li class="doc-content__list-item">
+    Added <a href="docs/base/media.html" class="doc-content__link" title="">media rules</a>
+ for all grid modifiers
+</li>
+
+</ul>
+<h2 class="doc-content__title doc-content__title_size_h2">
+    0.1.24 beta (06.02.2017)
+</h2>
+<ul class="
+    doc-content__list
+        
+    "
+>
+    <li class="doc-content__list-item">
+    Added <a href="docs/common/link.html" class="doc-content__link" title="">new block</a>
+ <code class="doc-content__codespan">.ui-link</code>
+
+</li>
+<li class="doc-content__list-item">
+    Added modifiers for <a href="docs/layout/box.html" class="doc-content__link" title="">ui-box</a>
+ padding<ul class="
+    doc-content__list
+        
+    "
+>
+    <li class="doc-content__list-item">
+    <code class="doc-content__codespan">.ui-box_padding-left_*</code>
+
+</li>
+<li class="doc-content__list-item">
+    <code class="doc-content__codespan">.ui-box_padding-top_*</code>
+
+</li>
+<li class="doc-content__list-item">
+    <code class="doc-content__codespan">.ui-box_padding-right_*</code>
+
+</li>
+<li class="doc-content__list-item">
+    <code class="doc-content__codespan">.ui-box_padding-bottom_*</code>
+
+</li>
+
+</ul>
+
+</li>
+<li class="doc-content__list-item">
+    Added modifiers for <a href="docs/layout/box.html" class="doc-content__link" title="">ui-box</a>
+ margin<ul class="
+    doc-content__list
+        
+    "
+>
+    <li class="doc-content__list-item">
+    <code class="doc-content__codespan">.ui-box_margin-left_*</code>
+
+</li>
+<li class="doc-content__list-item">
+    <code class="doc-content__codespan">.ui-box_margin-top_*</code>
+
+</li>
+<li class="doc-content__list-item">
+    <code class="doc-content__codespan">.ui-box_margin-right_*</code>
+
+</li>
+<li class="doc-content__list-item">
+    <code class="doc-content__codespan">.ui-box_margin-bottom_*</code>
+
+</li>
+
+</ul>
+
+</li>
+
+</ul>
+<h2 class="doc-content__title doc-content__title_size_h2">
+    0.1.23 beta (24.01.2017)
+</h2>
+<ul class="
+    doc-content__list
+        
+    "
+>
+    <li class="doc-content__list-item">
+    Added <a href="docs/elements/picture.html" class="doc-content__link" title="">new block</a>
+ <code class="doc-content__codespan">.ui-picture</code>
+
+</li>
+<li class="doc-content__list-item">
+    Added ui-width class <code class="doc-content__codespan">.ui-width-auto</code>
+
+</li>
+<li class="doc-content__list-item">
+    Added ui-width class <code class="doc-content__codespan">.ui-width-expand</code>
+
+</li>
+<li class="doc-content__list-item">
+    Added modifier for <a href="docs/layout/grid.html" class="doc-content__link" title="">ui-grid</a>
+ <code class="doc-content__codespan">.ui-grid_column_expand</code>
+
+</li>
+<li class="doc-content__list-item">
+    Fixed position for <code class="doc-content__codespan">.ui-list__item</code>
+
+</li>
+<li class="doc-content__list-item">
+    Changed the design documentation and add preview block
+</li>
+
+</ul>
+<h2 class="doc-content__title doc-content__title_size_h2">
+    0.1.21 beta (16.01.2017)
+</h2>
+<ul class="
+    doc-content__list
+        
+    "
+>
+    <li class="doc-content__list-item">
+    Added modifier for <a href="docs/layout/grid.html" class="doc-content__link" title="">ui-grid</a>
+ <code class="doc-content__codespan">.ui-grid_column_*</code>
+
+</li>
+<li class="doc-content__list-item">
+    Added description for <a href="docs/base/media.html" class="doc-content__link" title="">media queries</a>
+
+</li>
+<li class="doc-content__list-item">
+    Changed all media class from <code class="doc-content__codespan">.ui-width-xl-1-2</code>
+ to <code class="doc-content__codespan">.ui-width-1-2@xlarge</code>
+
+</li>
+
+</ul>
+<h2 class="doc-content__title doc-content__title_size_h2">
+    0.1.20 beta (13.01.2017)
+</h2>
+<ul class="
+    doc-content__list
+        
+    "
+>
+    <li class="doc-content__list-item">
+    Added <a href="docs/layout/box.html" class="doc-content__link" title="">new block</a>
+ <code class="doc-content__codespan">.ui-box</code>
+
+</li>
+<li class="doc-content__list-item">
+    Removed <code class="doc-content__codespan">.ui-block</code>
+
+</li>
+<li class="doc-content__list-item">
+    Fixed display for <code class="doc-content__codespan">.ui-list__item</code>
+
+</li>
+
+</ul>
+
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

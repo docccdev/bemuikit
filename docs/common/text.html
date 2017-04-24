@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BEM — UIkit</title>
+        <meta charset="utf-8">
+        <base href="../..">
+        <link href="css/doc.css" media="all" rel="stylesheet" type="text/css">
+        <link href="css/desktop.css" media="all" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;subset=latin,cyrillic">
+        <link rel="stylesheet" href="highlight/github.min.css">
+        <script src="highlight/highlight.min.js"></script>
+        <script>
+            function toggleTab(index, hash) {
+                var tabLinkList = document.querySelectorAll("[data-tab-link='"+hash+"']");
+                var tabContentList = document.querySelectorAll("[data-tab-content='"+hash+"']");
+
+                Array.prototype.forEach.call(tabLinkList, function(node, i) {
+                    if (index === i) {
+                        node.classList.add('doc-tab__list-item_state_active');
+                        tabContentList[i].classList.add('doc-tab__content_state_active');
+                    } else {
+                        node.classList.remove('doc-tab__list-item_state_active');
+                        tabContentList[i].classList.remove('doc-tab__content_state_active');
+                    }
+                });
+            }
+            hljs.initHighlightingOnLoad();
+        </script>
+    </head>
+    <body>
+
+        <div class="doc-header doc-header_theme_shadow">
+            <a href="index.html" class="doc-header__logo">UIkit</a>
+            <ul class="doc-header__nav">
+                
+                    <li class="doc-header__nav-item">
+                        <a
+                            href="docs.html"
+                            class="
+                                doc-header__nav-link
+                                
+                                    doc-header__nav-link_state_active
+                                
+                            "
+                        >
+                            
+                                documentation
+                            
+                        </a>
+                    </li>
+                
+                    <li class="doc-header__nav-item">
+                        <a
+                            href="changelog.html"
+                            class="
+                                doc-header__nav-link
+                                
+                            "
+                        >
+                            
+                                changelog
+                            
+                        </a>
+                    </li>
+                
+                    <li class="doc-header__nav-item">
+                        <a
+                            href="rules.html"
+                            class="
+                                doc-header__nav-link
+                                
+                            "
+                        >
+                            
+                                rules
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+
+        <div class="doc-page">
+            <div class="doc-page__side">
+                
+                    <div class="doc-page__side-title">
+                        
+                            Documentation
+                        
+                    </div>
+                    
+                        <div class="doc-menu">
+                            <div class="doc-menu__title">
+                                BASE
+                            </div>
+                            <div class="doc-menu__list">
+                                
+                                    <div class="doc-menu__list-item">
+                                        <a
+                                            href="docs/base/sizes.html"
+                                            class="
+                                                doc-menu__list-link
+                                                
+                                            "
+                                        >
+                                            Sizes
+                                        </a>
+                                    </div>
+                                
+                                    <div class="doc-menu__list-item">
+                                        <a
+                                            href="docs/base/media.html"
+                                            class="
+                                                doc-menu__list-link
+                                                
+                                            "
+                                        >
+                                            Media
+                                        </a>
+                                    </div>
+                                
+                            </div>
+                        </div>
+                    
+                        <div class="doc-menu">
+                            <div class="doc-menu__title">
+                                COMMON
+                            </div>
+                            <div class="doc-menu__list">
+                                
+                                    <div class="doc-menu__list-item">
+                                        <a
+                                            href="docs/common/title.html"
+                                            class="
+                                                doc-menu__list-link
+                                                
+                                            "
+                                        >
+                                            Title
+                                        </a>
+                                    </div>
+                                
+                                    <div class="doc-menu__list-item">
+                                        <a
+                                            href="docs/common/text.html"
+                                            class="
+                                                doc-menu__list-link
+                                                
+                                                    doc-menu__list-link_state_active
+                                                
+                                            "
+                                        >
+                                            Text
+                                        </a>
+                                    </div>
+                                
+                                    <div class="doc-menu__list-item">
+                                        <a
+                                            href="docs/common/line.html"
+                                            class="
+                                                doc-menu__list-link
+                                                
+                                            "
+                                        >
+                                            Line
+                                        </a>
+                                    </div>
+                                
+                                    <div class="doc-menu__list-item">
+                                        <a
+                                            href="docs/common/link.html"
+                                            class="
+                                                doc-menu__list-link
+                                                
+                                            "
+                                        >
+                                            Link
+                                        </a>
+                                    </div>
+                                
+                            </div>
+                        </div>
+                    
+                        <div class="doc-menu">
+                            <div class="doc-menu__title">
+                                ELEMENTS
+                            </div>
+                            <div class="doc-menu__list">
+                                
+                                    <div class="doc-menu__list-item">
+                                        <a
+                                            href="docs/elements/list.html"
+                                            class="
+                                                doc-menu__list-link
+                                                
+                                            "
+                                        >
+                                            List
+                                        </a>
+                                    </div>
+                                
+                                    <div class="doc-menu__list-item">
+                                        <a
+                                            href="docs/elements/picture.html"
+                                            class="
+                                                doc-menu__list-link
+                                                
+                                            "
+                                        >
+                                            Picture
+                                        </a>
+                                    </div>
+                                
+                            </div>
+                        </div>
+                    
+                        <div class="doc-menu">
+                            <div class="doc-menu__title">
+                                LAYOUT
+                            </div>
+                            <div class="doc-menu__list">
+                                
+                                    <div class="doc-menu__list-item">
+                                        <a
+                                            href="docs/layout/page.html"
+                                            class="
+                                                doc-menu__list-link
+                                                
+                                            "
+                                        >
+                                            Page
+                                        </a>
+                                    </div>
+                                
+                                    <div class="doc-menu__list-item">
+                                        <a
+                                            href="docs/layout/box.html"
+                                            class="
+                                                doc-menu__list-link
+                                                
+                                            "
+                                        >
+                                            Box
+                                        </a>
+                                    </div>
+                                
+                                    <div class="doc-menu__list-item">
+                                        <a
+                                            href="docs/layout/grid.html"
+                                            class="
+                                                doc-menu__list-link
+                                                
+                                            "
+                                        >
+                                            Grid
+                                        </a>
+                                    </div>
+                                
+                                    <div class="doc-menu__list-item">
+                                        <a
+                                            href="docs/layout/panel.html"
+                                            class="
+                                                doc-menu__list-link
+                                                
+                                            "
+                                        >
+                                            Panel
+                                        </a>
+                                    </div>
+                                
+                            </div>
+                        </div>
+                    
+                
+            </div>
+            <div class="doc-page__content">
+                <div class="doc-content">
+                    <h1 class="doc-content__title doc-content__title_size_h1">
+    Text
+</h1>
+<div class="doc-content__paragraph">
+    Коллекция полезных классов для стилизации вашего контента.
+</div>
+<h2 class="doc-content__title doc-content__title_size_h2">
+    Текстовые стили
+</h2>
+<div class="doc-content__table">
+    <div class="doc-content__table-head">
+        <div class="doc-content__table-row">
+    <div class="doc-content__table-cell">
+    Class
+</div>
+<div class="doc-content__table-cell">
+    Description
+</div>
+
+</div>
+
+    </div>
+    <div class="doc-content__table-body">
+        <div class="doc-content__table-row">
+    <div class="doc-content__table-cell">
+    <code class="doc-content__codespan">.ui-text-underline</code>
+
+</div>
+<div class="doc-content__table-cell">
+    Подчеркнутый текст.
+</div>
+
+</div>
+<div class="doc-content__table-row">
+    <div class="doc-content__table-cell">
+    <code class="doc-content__codespan">.ui-text-italic</code>
+
+</div>
+<div class="doc-content__table-cell">
+    Курсивный текст.
+</div>
+
+</div>
+<div class="doc-content__table-row">
+    <div class="doc-content__table-cell">
+    <code class="doc-content__codespan">.ui-text-strike</code>
+
+</div>
+<div class="doc-content__table-cell">
+    Перечеркнутый текст.
+</div>
+
+</div>
+
+    </div>
+</div>
+
+
+<div class="doc-tab">
+    <div class="doc-tab__list">
+        <div
+            class="doc-tab__list-item doc-tab__list-item_state_active"
+            data-tab-link='0ff4'
+            onclick="return toggleTab(0, '0ff4');"
+        >
+            Preview
+        </div>
+        <div
+            class="doc-tab__list-item"
+            data-tab-link='0ff4'
+            onclick="return toggleTab(1, '0ff4');"
+        >
+            Markup
+        </div>
+    </div>
+    <div class="doc-tab__content doc-tab__content_state_active" data-tab-content='0ff4'>
+        <div class="doc-example">
+    <span class='ui-text-underline'>
+        Подчеркнутый
+    </span>
+    <span class='ui-text-italic'>
+        Курсивный
+    </span>
+    <span class='ui-text-strike'>
+        Перечеркнутый
+    </span>
+</div>
+    </div>
+    <div class="doc-tab__content" data-tab-content='0ff4'>
+        <pre class="doc-content__code"><code class="html">&lt;div class=&quot;doc-example&quot;&gt;
+    &lt;span class=&#39;ui-text-underline&#39;&gt;
+        Подчеркнутый
+    &lt;/span&gt;
+    &lt;span class=&#39;ui-text-italic&#39;&gt;
+        Курсивный
+    &lt;/span&gt;
+    &lt;span class=&#39;ui-text-strike&#39;&gt;
+        Перечеркнутый
+    &lt;/span&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+<div class="doc-content__line"></div>
+<h2 class="doc-content__title doc-content__title_size_h2">
+    Насыщенность шрифта
+</h2>
+<div class="doc-content__table">
+    <div class="doc-content__table-head">
+        <div class="doc-content__table-row">
+    <div class="doc-content__table-cell">
+    Class
+</div>
+<div class="doc-content__table-cell">
+    font weight
+</div>
+
+</div>
+
+    </div>
+    <div class="doc-content__table-body">
+        <div class="doc-content__table-row">
+    <div class="doc-content__table-cell">
+    <code class="doc-content__codespan">.ui-text-thin</code>
+
+</div>
+<div class="doc-content__table-cell">
+    100
+</div>
+
+</div>
+<div class="doc-content__table-row">
+    <div class="doc-content__table-cell">
+    <code class="doc-content__codespan">.ui-text-light</code>
+
+</div>
+<div class="doc-content__table-cell">
+    300
+</div>
+
+</div>
+<div class="doc-content__table-row">
+    <div class="doc-content__table-cell">
+    <code class="doc-content__codespan">.ui-text-regular</code>
+
+</div>
+<div class="doc-content__table-cell">
+    400
+</div>
+
+</div>
+<div class="doc-content__table-row">
+    <div class="doc-content__table-cell">
+    <code class="doc-content__codespan">.ui-text-medium</code>
+
+</div>
+<div class="doc-content__table-cell">
+    500
+</div>
+
+</div>
+<div class="doc-content__table-row">
+    <div class="doc-content__table-cell">
+    <code class="doc-content__codespan">.ui-text-bold</code>
+
+</div>
+<div class="doc-content__table-cell">
+    700
+</div>
+
+</div>
+<div class="doc-content__table-row">
+    <div class="doc-content__table-cell">
+    <code class="doc-content__codespan">.ui-text-black</code>
+
+</div>
+<div class="doc-content__table-cell">
+    900
+</div>
+
+</div>
+
+    </div>
+</div>
+
+
+<div class="doc-tab">
+    <div class="doc-tab__list">
+        <div
+            class="doc-tab__list-item doc-tab__list-item_state_active"
+            data-tab-link='32a0'
+            onclick="return toggleTab(0, '32a0');"
+        >
+            Preview
+        </div>
+        <div
+            class="doc-tab__list-item"
+            data-tab-link='32a0'
+            onclick="return toggleTab(1, '32a0');"
+        >
+            Markup
+        </div>
+    </div>
+    <div class="doc-tab__content doc-tab__content_state_active" data-tab-content='32a0'>
+        <div class="doc-example">
+    <span class='ui-text-thin'>
+        100
+    </span>
+    <span class='ui-text-light'>
+        300
+    </span>
+    <span class='ui-text-regular'>
+        400
+    </span>
+    <span class='ui-text-medium'>
+        500
+    </span>
+    <span class='ui-text-bold'>
+        700
+    </span>
+    <span class='ui-text-black'>
+        900
+    </span>
+</div>
+    </div>
+    <div class="doc-tab__content" data-tab-content='32a0'>
+        <pre class="doc-content__code"><code class="html">&lt;div class=&quot;doc-example&quot;&gt;
+    &lt;span class=&#39;ui-text-thin&#39;&gt;
+        100
+    &lt;/span&gt;
+    &lt;span class=&#39;ui-text-light&#39;&gt;
+        300
+    &lt;/span&gt;
+    &lt;span class=&#39;ui-text-regular&#39;&gt;
+        400
+    &lt;/span&gt;
+    &lt;span class=&#39;ui-text-medium&#39;&gt;
+        500
+    &lt;/span&gt;
+    &lt;span class=&#39;ui-text-bold&#39;&gt;
+        700
+    &lt;/span&gt;
+    &lt;span class=&#39;ui-text-black&#39;&gt;
+        900
+    &lt;/span&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+<div class="doc-content__line"></div>
+<h2 class="doc-content__title doc-content__title_size_h2">
+    Цвет текста
+</h2>
+<div class="doc-content__table">
+    <div class="doc-content__table-head">
+        <div class="doc-content__table-row">
+    <div class="doc-content__table-cell">
+    Class
+</div>
+<div class="doc-content__table-cell">
+    Description
+</div>
+
+</div>
+
+    </div>
+    <div class="doc-content__table-body">
+        <div class="doc-content__table-row">
+    <div class="doc-content__table-cell">
+    <code class="doc-content__codespan">.ui-text-muted</code>
+
+</div>
+<div class="doc-content__table-cell">
+    Приглушенный цвет.
+</div>
+
+</div>
+
+    </div>
+</div>
+
+
+<div class="doc-tab">
+    <div class="doc-tab__list">
+        <div
+            class="doc-tab__list-item doc-tab__list-item_state_active"
+            data-tab-link='877a'
+            onclick="return toggleTab(0, '877a');"
+        >
+            Preview
+        </div>
+        <div
+            class="doc-tab__list-item"
+            data-tab-link='877a'
+            onclick="return toggleTab(1, '877a');"
+        >
+            Markup
+        </div>
+    </div>
+    <div class="doc-tab__content doc-tab__content_state_active" data-tab-content='877a'>
+        <div class="doc-example">
+    <div class='ui-text-muted'>
+        Приглушенный цвет текста
+    </div>
+</div>
+    </div>
+    <div class="doc-tab__content" data-tab-content='877a'>
+        <pre class="doc-content__code"><code class="html">&lt;div class=&quot;doc-example&quot;&gt;
+    &lt;div class=&#39;ui-text-muted&#39;&gt;
+        Приглушенный цвет текста
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+<div class="doc-content__line"></div>
+<h2 class="doc-content__title doc-content__title_size_h2">
+    Выравнивание текста
+</h2>
+<div class="doc-content__paragraph">
+    Добавьте один из этих классов для выравнивания текста по горизонтале.
+</div>
+<div class="doc-content__table">
+    <div class="doc-content__table-head">
+        <div class="doc-content__table-row">
+    <div class="doc-content__table-cell">
+    Class
+</div>
+<div class="doc-content__table-cell">
+    Description
+</div>
+
+</div>
+
+    </div>
+    <div class="doc-content__table-body">
+        <div class="doc-content__table-row">
+    <div class="doc-content__table-cell">
+    <code class="doc-content__codespan">.ui-text-left</code>
+
+</div>
+<div class="doc-content__table-cell">
+    Выравнивает текст влево.
+</div>
+
+</div>
+<div class="doc-content__table-row">
+    <div class="doc-content__table-cell">
+    <code class="doc-content__codespan">.ui-text-center</code>
+
+</div>
+<div class="doc-content__table-cell">
+    Выравнивает текст по центру.
+</div>
+
+</div>
+<div class="doc-content__table-row">
+    <div class="doc-content__table-cell">
+    <code class="doc-content__codespan">.ui-text-right</code>
+
+</div>
+<div class="doc-content__table-cell">
+    Выравнивает текст вправо.
+</div>
+
+</div>
+
+    </div>
+</div>
+
+
+<div class="doc-tab">
+    <div class="doc-tab__list">
+        <div
+            class="doc-tab__list-item doc-tab__list-item_state_active"
+            data-tab-link='3238'
+            onclick="return toggleTab(0, '3238');"
+        >
+            Preview
+        </div>
+        <div
+            class="doc-tab__list-item"
+            data-tab-link='3238'
+            onclick="return toggleTab(1, '3238');"
+        >
+            Markup
+        </div>
+    </div>
+    <div class="doc-tab__content doc-tab__content_state_active" data-tab-content='3238'>
+        <div class="doc-example">
+    <div class='ui-text-center'>
+        Текст по центру
+    </div>
+</div>
+    </div>
+    <div class="doc-tab__content" data-tab-content='3238'>
+        <pre class="doc-content__code"><code class="html">&lt;div class=&quot;doc-example&quot;&gt;
+    &lt;div class=&#39;ui-text-center&#39;&gt;
+        Текст по центру
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+<div class="doc-content__line"></div>
+<h2 class="doc-content__title doc-content__title_size_h2">
+    Вертикальное выравнивание
+</h2>
+<div class="doc-content__paragraph">
+    Добавьте один из этих классов для выравнивания текста по вертикали.
+</div>
+<div class="doc-content__table">
+    <div class="doc-content__table-head">
+        <div class="doc-content__table-row">
+    <div class="doc-content__table-cell">
+    Class
+</div>
+<div class="doc-content__table-cell">
+    Description
+</div>
+
+</div>
+
+    </div>
+    <div class="doc-content__table-body">
+        <div class="doc-content__table-row">
+    <div class="doc-content__table-cell">
+    <code class="doc-content__codespan">.ui-text-top</code>
+
+</div>
+<div class="doc-content__table-cell">
+    Выравнивает текст к верху.
+</div>
+
+</div>
+<div class="doc-content__table-row">
+    <div class="doc-content__table-cell">
+    <code class="doc-content__codespan">.ui-text-middle</code>
+
+</div>
+<div class="doc-content__table-cell">
+    Выравнивает к центру по вертикали.
+</div>
+
+</div>
+<div class="doc-content__table-row">
+    <div class="doc-content__table-cell">
+    <code class="doc-content__codespan">.ui-text-bottom</code>
+
+</div>
+<div class="doc-content__table-cell">
+    Выравнивает текст к низу.
+</div>
+
+</div>
+
+    </div>
+</div>
+
+
+<div class="doc-tab">
+    <div class="doc-tab__list">
+        <div
+            class="doc-tab__list-item doc-tab__list-item_state_active"
+            data-tab-link='acc0'
+            onclick="return toggleTab(0, 'acc0');"
+        >
+            Preview
+        </div>
+        <div
+            class="doc-tab__list-item"
+            data-tab-link='acc0'
+            onclick="return toggleTab(1, 'acc0');"
+        >
+            Markup
+        </div>
+    </div>
+    <div class="doc-tab__content doc-tab__content_state_active" data-tab-content='acc0'>
+        <div class='doc-example'>
+    <span class='ui-text-middle'>
+        Выравнивает к центру по вертикали
+    </span>
+</div>
+    </div>
+    <div class="doc-tab__content" data-tab-content='acc0'>
+        <pre class="doc-content__code"><code class="html">&lt;div class=&#39;doc-example&#39;&gt;
+    &lt;span class=&#39;ui-text-middle&#39;&gt;
+        Выравнивает к центру по вертикали
+    &lt;/span&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+<div class="doc-content__line"></div>
+<h2 class="doc-content__title doc-content__title_size_h2">
+    Перенос текста
+</h2>
+<div class="doc-content__paragraph">
+    Добавьте один из этих классов, чтобы определить перенос текста.
+</div>
+<div class="doc-content__table">
+    <div class="doc-content__table-head">
+        <div class="doc-content__table-row">
+    <div class="doc-content__table-cell">
+    Class
+</div>
+<div class="doc-content__table-cell">
+    Description
+</div>
+
+</div>
+
+    </div>
+    <div class="doc-content__table-body">
+        <div class="doc-content__table-row">
+    <div class="doc-content__table-cell">
+    <code class="doc-content__codespan">.ui-text-ellipsis</code>
+
+</div>
+<div class="doc-content__table-cell">
+    Текст обрезается и к концу строки добавляется троеточие.
+</div>
+
+</div>
+<div class="doc-content__table-row">
+    <div class="doc-content__table-cell">
+    <code class="doc-content__codespan">.ui-text-break</code>
+
+</div>
+<div class="doc-content__table-cell">
+    Перенос строк чтобы текст поместился в блок.
+</div>
+
+</div>
+<div class="doc-content__table-row">
+    <div class="doc-content__table-cell">
+    <code class="doc-content__codespan">.ui-text-nowrap</code>
+
+</div>
+<div class="doc-content__table-cell">
+    Весь текст отображается одной строкой.
+</div>
+
+</div>
+
+    </div>
+</div>
+
+
+<div class="doc-tab">
+    <div class="doc-tab__list">
+        <div
+            class="doc-tab__list-item doc-tab__list-item_state_active"
+            data-tab-link='8f2c'
+            onclick="return toggleTab(0, '8f2c');"
+        >
+            Preview
+        </div>
+        <div
+            class="doc-tab__list-item"
+            data-tab-link='8f2c'
+            onclick="return toggleTab(1, '8f2c');"
+        >
+            Markup
+        </div>
+    </div>
+    <div class="doc-tab__content doc-tab__content_state_active" data-tab-content='8f2c'>
+        <div class='doc-example'>
+    <div class='ui-text-ellipsis'>
+        Текст обрезается и к концу строки добавляется троеточие,
+        Текст обрезается и к концу строки добавляется троеточие,
+        Текст обрезается и к концу строки добавляется троеточие
+    </div>
+</div>
+    </div>
+    <div class="doc-tab__content" data-tab-content='8f2c'>
+        <pre class="doc-content__code"><code class="html">&lt;div class=&#39;doc-example&#39;&gt;
+    &lt;div class=&#39;ui-text-ellipsis&#39;&gt;
+        Текст обрезается и к концу строки добавляется троеточие,
+        Текст обрезается и к концу строки добавляется троеточие,
+        Текст обрезается и к концу строки добавляется троеточие
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
