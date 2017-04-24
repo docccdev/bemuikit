@@ -3,6 +3,7 @@ var stylus = require('gulp-stylus');
 var autoprefixer = require('autoprefixer-stylus');
 var gulpMdDocs = require('gulp-md-docs');
 var docTemplate = require('./doc_src/index.js');
+var ghPages = require('gulp-gh-pages');
 
 gulp.task('compile_doc_css', function () {
     return gulp.src('./doc_src/styl/bundles/doc.styl')
@@ -40,4 +41,9 @@ gulp.task('watch', function() {
     gulp.watch('./src/styl/**/*.styl', ['compile_uikit', 'copy_template_root_dir']);
     gulp.watch('./doc_src/styl/**/*.styl', ['compile_doc_css', 'copy_template_root_dir']);
     gulp.watch('./doc_md/**/*.md', ['compile_doc']);
+});
+
+gulp.task('deploy', function() {
+  return gulp.src('./doc_dist/**/*')
+    .pipe(ghPages());
 });
