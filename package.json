@@ -1,6 +1,6 @@
 {
-  "name": "@evo/bem-uikit",
-  "version": "0.1.34",
+  "name": "bem-uikit",
+  "version": "0.2.0",
   "description": "BEM-UIKit",
   "main": "index.js",
   "scripts": {

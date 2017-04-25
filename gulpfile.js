@@ -20,7 +20,7 @@ gulp.task('copy_template_root_dir', function() {
         .pipe(gulp.dest('./doc_dist'));
 });
 
-gulp.task('compile_uikit', function () {
+gulp.task('compile_uikit_css', function () {
     return gulp.src('./src/styl/bundles/*.styl')
         .pipe(stylus({
             compress: true,
@@ -29,7 +29,7 @@ gulp.task('compile_uikit', function () {
         .pipe(gulp.dest('./doc_src/__root/css'));
 });
 
-gulp.task('compile_doc', function() {
+gulp.task('compile_doc_html', function() {
     return gulp.src('./doc_md/**/*.md')
         .pipe(gulpMdDocs({
             template: docTemplate
@@ -38,12 +38,16 @@ gulp.task('compile_doc', function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch('./src/styl/**/*.styl', ['compile_uikit', 'copy_template_root_dir']);
+    gulp.watch('./src/styl/**/*.styl', ['compile_uikit_css', 'copy_template_root_dir']);
     gulp.watch('./doc_src/styl/**/*.styl', ['compile_doc_css', 'copy_template_root_dir']);
-    gulp.watch('./doc_md/**/*.md', ['compile_doc']);
+    gulp.watch('./doc_md/**/*.md', ['compile_doc_html']);
 });
 
 gulp.task('deploy', function() {
   return gulp.src('./doc_dist/**/*')
     .pipe(ghPages());
+});
+
+gulp.task('build', function() {
+  return gulp.start('compile_doc_css', 'compile_uikit_css', 'compile_doc_html', 'copy_template_root_dir');
 });
