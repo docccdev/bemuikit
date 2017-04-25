@@ -1,0 +1,26 @@
+// Global variables
+@import 'core/vars/global'
+@import 'core/functions'
+@import 'core/mixins/media'
+
+// Phones landscape
+media-add('small',  '(min-width: 480px)')
+
+// Tablets portrait
+media-add('medium', '(min-width: 768px)')
+
+// Tablets landscape
+media-add('large',  '(min-width: 960px)')
+
+// Laptop L
+media-add('xlarge', '(min-width: 1200px)')
+
+// Laptop XL
+media-add('xxlarge', '(min-width: 1400px)')
+
++prefix-classes($global-prefix)
+    // Blocks
+    @import 'blocks'
+
+    // Media
+    media-apply()

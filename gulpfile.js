@@ -21,7 +21,7 @@ gulp.task('copy_template_root_dir', function() {
 });
 
 gulp.task('compile_uikit_css', function () {
-    return gulp.src('./src/styl/bundles/*.styl')
+    return gulp.src('./src/styl/bemuikit.styl')
         .pipe(stylus({
             compress: true,
             use: [autoprefixer('last 5 versions')]
