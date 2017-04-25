@@ -4,7 +4,10 @@ changelog|3
 
 # Changelog
 
-## 0.1.34 beta (19.04.2017)
+## 0.2.0 beta
+- Fork...
+
+## 0.1.34 beta
 
 - Update [ui-panel](docs/layout/panel.html)
     - added border-radius and padding for children body
@@ -19,30 +22,30 @@ changelog|3
     - `.ui-box_margin-tb_auto`
     - `.ui-box_margin-lr_auto`
 
-## 0.1.33 beta (18.04.2017)
+## 0.1.33 beta
 
 - Added blue theme for [ui-box](docs/layout/box.html)
     - `.ui-box_theme_blue`
 - Improved block variables
 
 
-## 0.1.32 beta (13.04.2017)
+## 0.1.32 beta
 
 - Added [picture](docs/elements/picture.html) to portable bundle
 - Added min and max width for [grid__item](docs/layout/grid.html)
 
 
-## 0.1.31 beta (27.03.2017)
+## 0.1.31 beta
 
 - Fixed bug with [grid](docs/layout/grid.html) item padding when applied theme divider
 
 
-## 0.1.30 beta (23.03.2017)
+## 0.1.30 beta
 
 - Fixed bug with duplicate style
 
 
-## 0.1.29 beta (23.03.2017)
+## 0.1.29 beta
 
 - Big update [grid](docs/layout/grid.html) divider
     - `Responsive`
@@ -50,7 +53,7 @@ changelog|3
     - `Horizontal and vertical divider`
 
 
-## 0.1.28 beta (06.03.2017)
+## 0.1.28 beta
 
 - Added font weight class for [text](docs/common/text.html)
     - `.ui-text-thin`
@@ -60,7 +63,7 @@ changelog|3
     - `.ui-text-black`
 
 
-## 0.1.27 beta (06.03.2017)
+## 0.1.27 beta
 
 - Added modifier for [ui-box](docs/layout/box.html)
     - `.ui-box_theme_transparent`
@@ -70,7 +73,7 @@ changelog|3
 - Added [media rules](docs/base/media.html) for all [ui-panel](docs/layout/panel.html) modifiers
 
 
-## 0.1.26 beta (01.03.2017)
+## 0.1.26 beta
 
 - Added text color [ui-text-muted](docs/common/text.html)
 - Added modifier for [ui-panel](docs/layout/panel.html)
@@ -79,7 +82,7 @@ changelog|3
 - Reset margin-bottom for [ui-grid_theme_divider](docs/layout/grid.html)
 
 
-## 0.1.25 beta (20.02.2017)
+## 0.1.25 beta
 
 - Added modifiers for [ui-grid](docs/layout/grid.html)
     - `.ui-grid_direction_row`
@@ -91,7 +94,7 @@ changelog|3
 - Added [media rules](docs/base/media.html) for all grid modifiers
 
 
-## 0.1.24 beta (06.02.2017)
+## 0.1.24 beta
 
 - Added [new block](docs/common/link.html) `.ui-link`
 - Added modifiers for [ui-box](docs/layout/box.html) padding
@@ -106,7 +109,7 @@ changelog|3
     - `.ui-box_margin-bottom_*`
 
 
-## 0.1.23 beta (24.01.2017)
+## 0.1.23 beta
 
 - Added [new block](docs/elements/picture.html) `.ui-picture`
 - Added ui-width class `.ui-width-auto`
@@ -116,14 +119,14 @@ changelog|3
 - Changed the design documentation and add preview block
 
 
-## 0.1.21 beta (16.01.2017)
+## 0.1.21 beta
 
 - Added modifier for [ui-grid](docs/layout/grid.html) `.ui-grid_column_*`
 - Added description for [media queries](docs/base/media.html)
 - Changed all media class from `.ui-width-xl-1-2` to `.ui-width-1-2@xlarge`
 
 
-## 0.1.20 beta (13.01.2017)
+## 0.1.20 beta
 
 - Added [new block](docs/layout/box.html) `.ui-box`
 - Removed `.ui-block`
