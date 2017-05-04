@@ -1,16 +1,21 @@
 var gulp = require('gulp');
 var stylus = require('gulp-stylus');
-var autoprefixer = require('autoprefixer-stylus');
 var gulpMdDocs = require('gulp-md-docs');
 var docTemplate = require('./doc_src/index.js');
 var ghPages = require('gulp-gh-pages');
 
+var postcss = require('gulp-postcss');
+var autoprefixer = require('autoprefixer');
+
+var processors = [
+    autoprefixer({browsers: ['last 5 versions']})
+];
+
+
 gulp.task('compile_doc_css', function () {
     return gulp.src('./doc_src/styl/bundles/doc.styl')
-        .pipe(stylus({
-            compress: true,
-            use: [autoprefixer('last 5 versions')]
-        }))
+        .pipe(stylus({compress: true}))
+        .pipe(postcss(processors))
         .pipe(gulp.dest('./doc_src/__root/css'));
 });
 
@@ -22,10 +27,8 @@ gulp.task('copy_template_root_dir', function() {
 
 gulp.task('compile_uikit_css', function () {
     return gulp.src('./src/styl/bemuikit.styl')
-        .pipe(stylus({
-            compress: true,
-            use: [autoprefixer('last 5 versions')]
-        }))
+        .pipe(stylus({compress: true}))
+        .pipe(postcss(processors))
         .pipe(gulp.dest('./doc_src/__root/css'));
 });
 

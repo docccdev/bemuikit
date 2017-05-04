@@ -1,26 +1,19 @@
-// Global variables
-@import 'core/vars/global'
-@import 'core/functions'
-@import 'core/mixins/media'
+@import 'core/index'
+@import 'themes/default'
 
-// Phones landscape
-media-add('small',  '(min-width: 480px)')
++prefix-classes('ui-')
+    @import 'blocks/title'
+    @import 'blocks/text'
+    @import 'blocks/link'
+    @import 'blocks/line'
 
-// Tablets portrait
-media-add('medium', '(min-width: 768px)')
+    @import 'blocks/page'
+    @import 'blocks/box'
+    @import 'blocks/grid'
+    @import 'blocks/panel'
+    @import 'blocks/width'
 
-// Tablets landscape
-media-add('large',  '(min-width: 960px)')
+    @import 'blocks/list'
+    @import 'blocks/picture'
 
-// Laptop L
-media-add('xlarge', '(min-width: 1200px)')
-
-// Laptop XL
-media-add('xxlarge', '(min-width: 1400px)')
-
-+prefix-classes($global-prefix)
-    // Blocks
-    @import 'blocks'
-
-    // Media
     media-apply()

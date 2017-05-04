@@ -3,11 +3,11 @@
     margin-left: auto
     margin-right: auto
 
-    if $global-page['min-width']
-        min-width: $global-page['min-width']
+    if __bemuikit_theme.blocks.page['min-width']
+        min-width: __bemuikit_theme.blocks.page['min-width']
 
-    if $global-page['max-width']
-        max-width: $global-page['max-width']
+    if __bemuikit_theme.blocks.page['max-width']
+        max-width: __bemuikit_theme.blocks.page['max-width']
 
-    if length($global-page['padding'])
-        padding: $global-page['padding']
+    if length(__bemuikit_theme.blocks.page['padding'])
+        padding: __bemuikit_theme.blocks.page['padding']

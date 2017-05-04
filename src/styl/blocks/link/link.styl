@@ -1,8 +1,8 @@
 .link
-    color: $global-link['color']
+    color: __bemuikit_theme.blocks.link['color']
     text-decoration: none
 
-    if not $PORTABLE_MODE
+    if not __bemuikit_theme.flags.portable_mode
         cursor: pointer
 
         &:hover

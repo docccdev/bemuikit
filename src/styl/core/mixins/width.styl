@@ -1,0 +1,12 @@
+get_define_width($list)
+    $result_cache = {}
+
+    for count in ($list)
+        for index in (1..count)
+            $value = s('%s%',  index / count * 100)
+            $name = s('%s-%s', index, count)
+
+            unless $result_cache[$value]
+                $result_cache[$value] = $name
+
+    return $result_cache

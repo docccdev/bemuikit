@@ -1,11 +1,10 @@
-$__media-alias = {}
-$__media-cache = {}
+$__media_cache = {}
 
 media($condition)
     helper($condition)
-        unless $__media-cache[$condition]
-            $__media-cache[$condition] = ()
-        push($__media-cache[$condition], block)
+        unless $__media_cache[$condition]
+            $__media_cache[$condition] = ()
+        push($__media_cache[$condition], block)
 
     +helper($condition)
         {selector() + ''}
@@ -15,19 +14,14 @@ media-selector($className)
     {$className}
         {block}
 
-    for media_name in $__media-alias
+    for media_name in __bemuikit_theme.media_list
         +media(media_name)
             {$className}\\@{media_name}
                 {block}
 
-media-add($condition, $alias)
-    unless $__media-alias[$condition]
-        $__media-cache[$condition] = ()
-        $__media-alias[$condition] = $alias
-
 media-apply()
-    for $media, $blocks in $__media-cache
-        $media = unquote($__media-alias[$media] || $media)
+    for $media, $blocks in $__media_cache
+        $media = unquote(__bemuikit_theme.media_list[$media] || $media)
         $media = '(%s)' % $media unless match('\(', $media)
         $media = 'only screen and %s' % $media
 

@@ -1,7 +1,7 @@
 .link_style_dotted
     border-bottom: 1px dotted
 
-    if not $PORTABLE_MODE
+    if not __bemuikit_theme.flags.portable_mode
         &:hover
             text-decoration: none
             border-bottom-color: transparent
